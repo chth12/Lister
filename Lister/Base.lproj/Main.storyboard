@@ -28,12 +28,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="mhU-Lf-NDI">
                                         <rect key="frame" x="83" y="209" width="209" height="250"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lister" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbi-QL-3gK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lister" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbi-QL-3gK">
                                                 <rect key="frame" x="0.0" y="0.0" width="209" height="116.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="85"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ol-wG-Kxf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ol-wG-Kxf">
                                                 <rect key="frame" x="0.0" y="156.5" width="209" height="93.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -180,7 +180,7 @@
                                         <rect key="frame" x="115.5" y="229" width="145.5" height="210"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBF-jg-JrJ">
-                                                <rect key="frame" x="29" y="0.0" width="87" height="46"/>
+                                                <rect key="frame" x="29.5" y="0.0" width="87" height="46"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="33"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
@@ -192,7 +192,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uY4-F7-Qmu">
-                                                <rect key="frame" x="25.5" y="152" width="94" height="58"/>
+                                                <rect key="frame" x="26" y="152" width="94" height="58"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="33"/>
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.43435402684563756" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,7 +213,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.43435402680000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Nxw-tx-dXo" kind="show" identifier="toResetPassword" id="rbX-dG-P1e"/>
+                                                    <segue destination="Nxw-tx-dXo" kind="show" identifier="toRegisterUser" id="pWX-bG-Hl7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnC-Lm-xAh">
@@ -378,7 +378,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ynE-ZM-CXs" id="Jpq-yA-9BT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-ql-RYk">
@@ -495,7 +495,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uc9-2g-T9w" id="VRM-mi-IpX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9t-50-Z1f">
@@ -741,11 +741,8 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                                <connections>
-                                                    <segue destination="pDM-8x-a46" kind="unwind" unwindAction="unwindtoLogOnVCWithUnwind:" id="R1v-hZ-X5z"/>
-                                                </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81C-a1-29f">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81C-a1-29f">
                                                 <rect key="frame" x="72" y="213" width="113" height="53"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal" title="Register">
@@ -753,7 +750,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="registerButtonPressed:" destination="Nxw-tx-dXo" eventType="touchUpInside" id="XZO-r0-0gO"/>
-                                                    <segue destination="pDM-8x-a46" kind="unwind" unwindAction="unwindtoLogOnVCWithUnwind:" id="6AY-mO-WFY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -777,10 +773,10 @@
                     <connections>
                         <outlet property="emailAddress" destination="ipf-bi-Zp4" id="bI8-qn-pUG"/>
                         <outlet property="password" destination="9Ke-F4-hOj" id="sUG-2H-5WC"/>
+                        <outlet property="reEnterPassword" destination="9Ke-F4-hOj" id="mfh-Lh-7DZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfW-ks-SG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pDM-8x-a46" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="916" y="1653"/>
         </scene>
@@ -800,7 +796,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xx8-St-6Gt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-612" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-612" y="124"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
