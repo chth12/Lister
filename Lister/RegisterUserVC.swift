@@ -16,23 +16,21 @@ class RegisterUserVC: UIViewController {
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var reEnterPassword: UITextField!
+    var FUS : FirebaseUserService = FirebaseUserService.instance
 
     @IBAction func registerButtonPressed(_ sender: Any?) {
-        print("TODD: button pressed")
-        if emailAddress != nil || password != nil || reEnterPassword != nil{
-            FIRAuth.auth()?.createUser(withEmail: emailAddress.text! as String, password: password.text! as String, completion: {
-                (user, error) in
-                if error != nil {
-                    print("TODD2: \(error!)")
-                    self.emailAddress.borderStyle = UITextBorderStyle.roundedRect
-                }
-            })
-            } else {
-            
+        let email = emailAddress.text! as String
+        let password1 = password.text! as String
+        let password2 = reEnterPassword.text! as String
+        if FUS.validateEmail(address: emailAddress.text! as String) {
+            if FUS.validatePasswordMatch(pass1: password1, pass2: password2) {
+                FUS.logIn(address: email, pass: password1)
+            }
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }

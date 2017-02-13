@@ -10,7 +10,9 @@ import UIKit
 
 class EmailLogInVC: UIViewController {
 
-    
+    @IBAction func unwindtoEmailLogInVC(unwind: UIStoryboardSegue) {
+        //TODO get user log on information
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
