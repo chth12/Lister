@@ -23,29 +23,42 @@ public class FirebaseUserService: NSObject {
             return emailTest.evaluate(with: address)
         }
     }
-    
-    func validatePasswordMatch(pass1: String, pass2: String) -> Bool {
+    func validatePasswordEmpty(pass1: String, pass2: String = "N/A") -> Bool {
         if pass1.isEmpty {
-            if pass2.isEmpty {
-                return false
-            }
+            return false
+        } else if pass2.isEmpty {
+            return false
         } else {
-            if pass1 == pass2 {
-                
             return true
-            } else {
-                return false
-            }
+        }
+    }
+    func validatePasswordMatch(pass1: String, pass2: String) -> Bool {
+        if pass1 == pass2 {
+            return true
         }
         return false
     }
     
-    func logIn(address: String, pass: String) {
+    func registerNewUser(address: String, pass: String) {
         FIRAuth.auth()?.createUser(withEmail: address as String, password: pass as String, completion: {
             (user, error) in
             if error != nil {
                 print("TODD2: \(error!)")
+                // TODO : Error Handling
             }
+        })
+    }
+    func signIn(address: String, pass: String) {
+        FIRAuth.auth()?.signIn(withEmail: address, password: pass, completion: { (user, error) in
+//            if error != nil{
+//                print("Error: \(error)")
+//                alert(message: error!.localizedDescription)
+//            } else {
+//                let defaults = UserDefaults.standard
+//                let profile = [(user?.uid)!,(user?.email)!]
+//                defaults.set(profile, forKey: "profile")
+//                performSegue(withIdentifier: "toMainVCFromEmailLogInVC", sender: self)
+//            }
         })
     }
 }

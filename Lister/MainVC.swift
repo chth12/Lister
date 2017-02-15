@@ -11,7 +11,7 @@ import UIKit
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var cell: UITableViewCell!
-  
+    
     @IBAction func logOutPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         
@@ -21,7 +21,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return cell
     }
@@ -29,12 +29,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
 }
