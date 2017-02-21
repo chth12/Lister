@@ -51,15 +51,6 @@ class EmailLogInVC: UIViewController {
         }
         
     }
-    func alert(message: String) {
-        
-        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let OKaction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.dismiss(animated: true, completion: nil)
-        })
-        alertController.addAction(OKaction)
-        present(alertController, animated: true, completion: nil)
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.emailAddress.text = nil
         self.password.text = nil

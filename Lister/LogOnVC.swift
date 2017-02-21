@@ -9,22 +9,38 @@
 import UIKit
 
 class LogOnVC: UIViewController {
-
+    
+    let defaults = UserDefaults.standard
+    
     @IBAction func unwindtoLogOnVC(unwind: UIStoryboardSegue) {
-        //TODO get user log on information
+   
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+            }
 
-        // Do any additional setup after loading the view.
-    }
 }
+
 extension UIViewController {
+    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
+    
+    func alert(message: String) {
+        
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let OKaction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(OKaction)
+        present(alertController, animated: true, completion: nil)
+    }
+
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
 }

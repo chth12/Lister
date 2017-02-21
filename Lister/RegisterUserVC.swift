@@ -48,7 +48,6 @@ class RegisterUserVC: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,15 +55,4 @@ class RegisterUserVC: UIViewController {
         self.password.text = nil
     }
 
-    func alert(message: String) {
-        
-        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let OKaction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.dismiss(animated: true, completion: nil)
-        })
-        alertController.addAction(OKaction)
-        present(alertController, animated: true, completion: nil)
-        
-        
-    }
 }

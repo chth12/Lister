@@ -39,26 +39,4 @@ public class FirebaseUserService: NSObject {
         return false
     }
     
-    func registerNewUser(address: String, pass: String) {
-        FIRAuth.auth()?.createUser(withEmail: address as String, password: pass as String, completion: {
-            (user, error) in
-            if error != nil {
-                print("TODD2: \(error!)")
-                // TODO : Error Handling
-            }
-        })
-    }
-    func signIn(address: String, pass: String) {
-        FIRAuth.auth()?.signIn(withEmail: address, password: pass, completion: { (user, error) in
-//            if error != nil{
-//                print("Error: \(error)")
-//                alert(message: error!.localizedDescription)
-//            } else {
-//                let defaults = UserDefaults.standard
-//                let profile = [(user?.uid)!,(user?.email)!]
-//                defaults.set(profile, forKey: "profile")
-//                performSegue(withIdentifier: "toMainVCFromEmailLogInVC", sender: self)
-//            }
-        })
-    }
 }
